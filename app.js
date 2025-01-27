@@ -15,6 +15,11 @@ function agregarAmigo(){
         return;
     }
 
+    if(amigos.includes(nombre)){
+        alert("Este amigo ya fue agregado");
+        return;
+    }
+
     amigos.push(nombre);
 
     inputAmigo.value = "";
@@ -22,17 +27,47 @@ function agregarAmigo(){
     mostrarLista();
 }
 
+//extra: Implementa la función para eliminar amigos
+
+function eliminarAmigo(nombre) {
+    amigos = amigos.filter(amigo => amigo !== nombre);
+
+    mostrarLista();
+}
+
 //Implementa la función para actualizar la lista de amigos
 
-function mostrarLista(){
-    const listaAmigos = document.getElementById("lista-amigos");
+function mostrarLista() {
+    const listaAmigos = document.getElementById("listaAmigos");
+
     listaAmigos.innerHTML = "";
 
     amigos.forEach((amigo, index) => {
-        const li = document.createElement("li");
-        li.textContent = `${index + 1}. ${amigo}`;
-        listaAmigos.appendChild(li);
+        const elemento = document.createElement("li");
+        elemento.textContent = `${index + 1}. ${amigo}`;
+
+        const botonEliminar = document.createElement("button");
+        botonEliminar.textContent = "Eliminar";
+        botonEliminar.onclick = () => eliminarAmigo(amigo);
+
+        elemento.appendChild(botonEliminar);
+        listaAmigos.appendChild(elemento);
     });
 }
 
+
 //Implementa la función para sortear los amigos
+
+function sortearAmigo(){
+    if(amigos.length === 0){
+        alert("Debes agregar al menos un amigo");
+        return;
+    }
+
+    const amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
+}
+
+
