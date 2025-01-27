@@ -85,4 +85,4 @@ amigo-secreto/
 Si tienes alguna pregunta o sugerencia, puedes contactarme en:
 
 - **Correo electrónico:** valenciagranadaj@gmail.com 
-- **GitHub:** [TuUsuario](https://github.com/juliovalenciag)
+- **GitHub:** [juliovalenciag](https://github.com/juliovalenciag)
