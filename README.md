@@ -44,11 +44,11 @@ Sigue estos pasos para obtener una copia del proyecto en tu máquina local:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tuusuario/amigo-secreto.git
+   git clone https://github.com/juliovalenciag/challenge-amigo-secreto
 
 2. Entra en el directorio del proyecto:
    ```bash
-   cd amigo-secreto
+   cd challenge-amigo-secreto
 
 3. Abre el archivo index.html en tu navegador
 
